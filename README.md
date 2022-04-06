@@ -4,7 +4,7 @@ This is a sandbox for playing with EdgeDB and the EdgeQL query builder in a Next
 
 ## Setup
 
-1. Install the EdgeDB CLI
+### 1 Install the EdgeDB CLI
 
 ```bash
 # macOS/Linux
@@ -14,57 +14,57 @@ $ curl --proto '=https' --tlsv1.2 -sSf https://sh.edgedb.com | sh
 $ iwr https://ps1.edgedb.com -useb | iex
 ```
 
-2. Clone the repo
+### 2 Clone the repo
 
 ```bash
 git clone git@github.com:colinhacks/edgedb-movies.git
 cd edgedb-movies
 ```
 
-3. Install dependencies
+### 3 Install dependencies
 
 ```bash
 yarn
 ```
 
-4. Install dependencies
+### 4 Install dependencies
 
 ```bash
 yarn
 ```
 
-5. Initialize the EdgeDB project
+### 5 Initialize the EdgeDB project
 
 ```bash
 edgedb project init
 ```
 
-6. Generate the query builder
+### 6 Generate the query builder
 
 ```bash
 npx edgeql-js --target cjs
 ```
 
-7. Seed the database
+### 7 Seed the database
 
 ```bash
 npx ts-node seed.ts
 ```
 
-8. Start the dev sserver
+### 8 Start the dev server
 
 ```bash
 yarn dev
 ```
 
-9. Go to [localhost:3000](http://localhost:3000)
+### 9 Go to [localhost:3000](http://localhost:3000)
 
 ## Playing with the project
 
 The sandbox consists of a single-page Next.js application.
 
 - `pages/index.tsx` - the homepage
-- `query.ts` - the query executed in the homepage's `getServerSideProps`. the result is displayed
+- `query.ts` - the query executed inside the homepage's `getServerSideProps`. the result is pretty-printed on the homepage.
 - `dbschema/default.esdl` - the schema file
 - `dbschema/migrations` - the migrations directory
 - `dbschema/edgeql-js` - the default location of the generated query builder
