@@ -1,0 +1,39 @@
+{
+  // "extends": "@tsconfig/node14/tsconfig.json",
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "es2017" // required: es2017+
+    ],
+    "target": "es2018",
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "strict": true,
+    "downlevelIteration": true, // required
+    "declaration": true,
+    "allowJs": true,
+    // "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    // "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    // "module": "esnext",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "skipLibCheck": true,
+    "module": "commonjs",
+    "noEmit": true
+  },
+  "include": [
+    // "src/*",
+    // "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "seed.mjs"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
