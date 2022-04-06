@@ -27,37 +27,35 @@ cd edgedb-movies
 yarn
 ```
 
-#### 4. Install dependencies
-
-```bash
-yarn
-```
-
-#### 5. Initialize the EdgeDB project
+#### 4. Initialize the EdgeDB project
 
 ```bash
 edgedb project init
 ```
 
-#### 6. Generate the query builder
+Then follow the prompts. This step spins up a local EdgeDB instance and apply all the migrations inside `dbschema/migrations`.
+
+After the project is initialized, all EdgeDB clients initialized inside the project directory will connect to the newly-created instance automatically—no need for environment variables or hard-coded configuration. ([Read more about projects here.](https://www.edgedb.com/docs/guides/projects))
+
+#### 5. Generate the query builder
 
 ```bash
-npx edgeql-js --target cjs
+npx edgeql-js
 ```
 
-#### 7. Seed the database
+#### 6. Seed the database
 
 ```bash
 npx ts-node seed.ts
 ```
 
-#### 8. Start the dev server
+#### 7. Start the dev server
 
 ```bash
 yarn dev
 ```
 
-#### 9. Go to [localhost:3000](http://localhost:3000)
+The application is now running on [localhost:3000](http://localhost:3000).
 
 ## Playing with the project
 
