@@ -484,7 +484,12 @@ async function run() {
         filter: e.op(
           content.title,
           'in',
-          e.set('Moon Knight', 'Avengers: Endgame', 'Eternals')
+          e.set(
+            'Moon Knight',
+            'Avengers: Endgame',
+            'Eternals',
+            'Spider-Man: No Way Home'
+          )
         ),
       })),
     });

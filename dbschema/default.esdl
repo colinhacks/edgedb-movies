@@ -3,7 +3,6 @@ using extension graphql;
 module default {
 
   type Account {
-    required property email -> str;
     required property username -> str {
       constraint exclusive;
     };
@@ -28,7 +27,6 @@ module default {
 
   type Person {
     required property name -> str;
-    property name_length := len(.name);
     multi link acted_in := .<actors[is Content];
     multi link directed := .<director[is Movie];
   }
