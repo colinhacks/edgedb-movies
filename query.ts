@@ -6,22 +6,13 @@ const client = createClient();
 
 export async function query() {
   // write query
-  const query = e.select(e.Account, (acct) => ({
+  const query = e.select(e.Movie, (movie) => ({
     id: true,
-    username: true,
-    watchlist: {
-      title: true,
-      ...e.is(e.Movie, {
-        release_year: true,
-      }),
-      ...e.is(e.TVShow, {
-        num_seasons: true,
-      }),
-    },
-    filter: e.op(acct.username, '=', 'colinhacks'),
+    title: true,
+    cast_size: e.count(movie.actors),
+    filter: e.op(movie.title, '=', 'The Batman'),
   }));
 
   const result = await query.run(client);
-
   return result;
 }

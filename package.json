@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "play": "tsc --incremental && node dist/index.js",
-    "seed": "ts-node seed.ts",
+    "run": "npx esbuild-runner script.ts",
+    "seed": "npx esbuild-runner seed.ts",
     "watch": "nodemon -w index.ts -x 'yarn play'",
     "build": "tsc --incremental",
     "dev": "next dev"

@@ -18,8 +18,13 @@ async function run() {
     order_by: movie.release_year,
   }));
   query.toEdgeQL();
-
   const result = await query.run(client);
+  console.log(result);
 }
 
 run();
+
+const sdf = {arg: 'asdf'};
+
+export const loader = sdf.arg;
+export default sdf.arg;
