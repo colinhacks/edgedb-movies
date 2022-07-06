@@ -13,7 +13,6 @@ async function run() {
   }));
 
   const result = await query.run(client);
-  // asdf
   console.log(result);
 }
 
