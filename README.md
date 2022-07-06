@@ -21,13 +21,7 @@ git clone git@github.com:colinhacks/edgedb-movies.git
 cd edgedb-movies
 ```
 
-#### 3. Install dependencies
-
-```bash
-yarn
-```
-
-#### 4. Initialize the EdgeDB project
+#### 3. Initialize the EdgeDB project
 
 ```bash
 edgedb project init
@@ -37,32 +31,36 @@ Then follow the prompts. This step spins up a local EdgeDB instance and apply al
 
 After the project is initialized, all EdgeDB clients initialized inside the project directory will connect to the newly-created instance automatically—no need for environment variables or hard-coded configuration. ([Read more about projects here.](https://www.edgedb.com/docs/guides/projects))
 
-#### 5. Generate the query builder
+#### 4. Setup project
 
 ```bash
-npx edgeql-js
+npm run setup
 ```
 
-#### 6. Seed the database
+The `setup` script is an alias for the following steps, which you can optionally run individually.
 
 ```bash
-npx ts-node seed.ts
+$ npm install
+$ npx edgeql-js
+$ npx esr seed.ts
 ```
 
-#### 7. Start the dev server
+### 5. Start writing queries!
+
+Open `script.ts` to start writing queries! To execute the query:
 
 ```bash
-yarn dev
+npm run dev
 ```
 
-The application is now running on [localhost:3000](http://localhost:3000).
+This starts a watcher, so every time you update `script.ts`, the script will be re-run. The result of the query will be logged to the terminal.
 
 ## Playing with the project
 
 The sandbox consists of a single-page Next.js application.
 
-- `pages/index.tsx` - the homepage
-- `query.ts` - the query executed inside the homepage's `getServerSideProps`. the result is pretty-printed on the homepage.
+- `script.ts` - a simple script you can update to play with the query builder
+  `getServerSideProps`. the result is pretty-printed on the homepage.
 - `dbschema/default.esdl` - the schema file
 - `dbschema/migrations` - the migrations directory
 - `dbschema/edgeql-js` - the default location of the generated query builder

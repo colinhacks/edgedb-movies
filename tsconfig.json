@@ -7,6 +7,7 @@
     ],
     "target": "es2018",
     "outDir": "dist",
+    "module": "node16",
     "moduleResolution": "node",
     "strict": true,
     "downlevelIteration": true, // required
@@ -18,7 +19,6 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "skipLibCheck": true,
-    "module": "commonjs",
     "noEmit": true,
     "incremental": true
   },
