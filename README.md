@@ -1,6 +1,6 @@
 # The EdgeDB MCU sandbox
 
-This is a sandbox for playing with EdgeDB and the EdgeQL query builder.
+This is a sandbox for playing with EdgeDB and the EdgeQL query builder. It includes a simple movie database schema (`dbschema/default.esdl`) and a sample dataset (`seed.ts`) containing the movies/shows in the Marvel Cinematic Universe.
 
 ## Setup
 
@@ -47,13 +47,13 @@ $ npx esr seed.ts
 
 ### 5. Start writing queries!
 
-Open `script.ts` to start writing queries! To execute the query:
+Start writing some queries in `script.ts`! Then execute it like so:
 
 ```bash
 npm run dev
 ```
 
-This starts a watcher, so every time you update `script.ts`, the script will be re-run. The result of the query will be logged to the terminal.
+This starts a watcher, so every time you save `script.ts`, the script will be re-run automatically.
 
 ## Playing with the project
 
