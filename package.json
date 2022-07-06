@@ -5,45 +5,35 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run": "npx esbuild-runner script.ts",
-    "seed": "npx esbuild-runner seed.ts",
-    "watch": "nodemon -w index.ts -x 'yarn play'",
-    "build": "tsc --incremental",
-    "dev": "next dev"
+    "dev": "nodemon -w '**/*.ts' -x 'npx esr script.ts'",
+    "seed": "npx esr seed.ts",
+    "setup": "npm i && npx esr seed.ts",
+    "watch": "nodemon -w index.ts -x 'npm run script'",
+    "build": "tsc --incremental"
   },
   "keywords": [],
   "author": "Colin McDonnell",
   "license": "ISC",
   "dependencies": {
-    "@types/react": "^17.0.39",
-    "@types/react-dom": "^17.0.11",
-    "@typescript-eslint/eslint-plugin": "^5.11.0",
-    "@typescript-eslint/parser": "^5.11.0",
-    "axios": "^0.26.0",
-    "edgedb": "^0.20.7",
-    "eslint": "^8.8.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
-    "eslint-plugin-unused-imports": "^2.0.0",
-    "json-beautify": "^1.1.1",
-    "next": "^12.0.10",
-    "nodemon": "^2.0.15",
-    "prettier": "^2.5.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "edgedb": "^0.20.7"
   },
   "engines": {
     "node": ">=14.0.0"
   },
   "devDependencies": {
-    "@swc-node/register": "^1.4.2",
-    "@swc/cli": "^0.1.57",
-    "@swc/core": "^1.2.163",
     "@tsconfig/node14": "^1.0.1",
     "@types/node": "^17.0.16",
-    "regenerator-runtime": "^0.13.9",
-    "ts-node": "^10.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "esbuild": "^0.14.48",
+    "esbuild-runner": "^2.2.1",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1",
     "typescript": "^4.6.2"
   }
 }
