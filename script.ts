@@ -5,8 +5,8 @@ const client = createClient({});
 
 async function run() {
   const query = e.select(e.Movie, (movie) => ({
-    id: true,
     title: true,
+    release_year: true,
     cast_size: e.count(movie.actors),
     filter: e.op(movie.title, 'ilike', '%avengers%'),
     order_by: movie.release_year,

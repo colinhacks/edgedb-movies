@@ -84,6 +84,7 @@ const characterNames: Record<string, string> = {
   'Hailee Steinfeld': 'Kate Bishop',
   'Oscar Isaac': 'Moon Knight',
   'Ethan Hawke': 'Arthur Harrow',
+  'Iman Vellani': 'Ms. Marvel',
 };
 
 const fullMovies = [
@@ -357,6 +358,11 @@ const fullMovies = [
       'The Lizard',
     ],
   },
+  {
+    title: 'Doctor Strange in the Multiverse of Madness',
+    release_year: 2021,
+    characters: ['Doctor Strange', 'Scarlet Witch', 'Wong'],
+  },
 ];
 
 const tvShows = [
@@ -390,6 +396,11 @@ const tvShows = [
     title: 'Moon Knight',
     num_seasons: 1,
     characters: ['Moon Knight', 'Arthur Harrow'],
+  },
+  {
+    title: 'Ms. Marvel',
+    num_seasons: 1,
+    characters: ['Ms. Marvel'],
   },
 ];
 
@@ -499,6 +510,8 @@ async function run() {
   } catch (err) {
     console.log(err);
   }
+
+  console.log(`SEEDING COMPLETE.`);
   client.close();
 }
 

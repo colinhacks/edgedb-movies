@@ -1,6 +1,6 @@
 # The EdgeDB MCU sandbox
 
-This is a sandbox for playing with EdgeDB and the EdgeQL query builder in a Next.js environment.
+This is a sandbox for playing with EdgeDB and the EdgeQL query builder.
 
 ## Setup
 
@@ -57,10 +57,9 @@ This starts a watcher, so every time you update `script.ts`, the script will be 
 
 ## Playing with the project
 
-The sandbox consists of a single-page Next.js application.
+The sandbox is a simple project designed to showcase the query builder.
 
 - `script.ts` - a simple script you can update to play with the query builder
-  `getServerSideProps`. the result is pretty-printed on the homepage.
 - `dbschema/default.esdl` - the schema file
 - `dbschema/migrations` - the migrations directory
 - `dbschema/edgeql-js` - the default location of the generated query builder

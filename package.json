@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon -w '**/*.ts' -x 'npx esr script.ts'",
+    "dev": "nodemon -e ts -x 'npx esr script.ts'",
     "seed": "npx esr seed.ts",
-    "setup": "npm i && npx esr seed.ts",
-    "watch": "nodemon -w index.ts -x 'npm run script'",
+    "setup": "npm i && npx edgeql-js --force-overwrite && npx esr seed.ts",
     "build": "tsc --incremental"
   },
   "keywords": [],
